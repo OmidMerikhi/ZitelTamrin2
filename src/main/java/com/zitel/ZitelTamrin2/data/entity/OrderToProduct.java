@@ -1,9 +1,11 @@
 package com.zitel.ZitelTamrin2.data.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "orderToProduct_tbl")
+@Data
 public class OrderToProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
