@@ -17,4 +17,24 @@ public class Customer {
     private int identityNumber;
     private LocalDateTime registerDate;
 
+    public Customer(String firstName, String lastName, int identityNumber, LocalDateTime registerDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.identityNumber = identityNumber;
+        this.registerDate = registerDate;
+    }
+
+    public Customer() {
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", identityNumber=" + identityNumber +
+                ", registerDate=" + registerDate +
+                '}';
+    }
 }

@@ -15,4 +15,29 @@ public class Order {
     private int trackNumber;
     private double totalPrice;
     private LocalDateTime orderDate;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    public Order(int trackNumber, double totalPrice, LocalDateTime orderDate, Customer customer) {
+        this.trackNumber = trackNumber;
+        this.totalPrice = totalPrice;
+        this.orderDate = orderDate;
+        this.customer = customer;
+    }
+
+    public Order() {
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", trackNumber=" + trackNumber +
+                ", totalPrice=" + totalPrice +
+                ", orderDate=" + orderDate +
+                ", customer=" + customer +
+                '}';
+    }
 }
