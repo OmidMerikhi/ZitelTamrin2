@@ -21,6 +21,6 @@ public class ProductService {
     }
 
     public List<Product> searchProduct(String value){
-        return productRepository.searchProduct(value);
+        return productRepository.searchProduct("%"+value+"%");
     }
 }

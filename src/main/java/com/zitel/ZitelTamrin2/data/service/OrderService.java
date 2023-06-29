@@ -12,12 +12,19 @@ public class OrderService {
     @Autowired
     OrderRepository orderRepository;
 
-    public List<Order> getASllOrder(){
+    public List<Order> getAllOrder(){
         return orderRepository.findAll();
     }
 
     public Order saveOrder(Order order){
         return orderRepository.save(order);
+    }
+    public Order getOrderById(Long id){
+        return orderRepository.getOrderById(id);
+    }
+
+    public List<Order> getOrderByCustomer(Long customerId){
+        return orderRepository.getOrderByCustomerId(customerId);
     }
 
 

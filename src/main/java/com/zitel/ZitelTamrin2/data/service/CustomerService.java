@@ -25,7 +25,7 @@ public class CustomerService {
     }
 
     public List<Customer> searchCustomer(String value){
-        return customerRepository.searchCustomer(value);
+        return customerRepository.searchCustomer("%"+value+"%");
     }
 
 
